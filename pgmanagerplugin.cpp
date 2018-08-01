@@ -1,30 +1,21 @@
 #include "pgmanagerplugin.h"
-#include "pgmanagerconstants.h"
-
-#include <coreplugin/icore.h>
-#include <coreplugin/icontext.h>
-#include <coreplugin/actionmanager/actionmanager.h>
-#include <coreplugin/actionmanager/command.h>
-#include <coreplugin/actionmanager/actioncontainer.h>
-#include <coreplugin/coreconstants.h>
-
-#include <QAction>
-#include <QMessageBox>
-#include <QMainWindow>
-#include <QMenu>
+#include "navigationwidget.h"
 
 namespace PgManager {
 namespace Internal {
 
-PgManagerPlugin::PgManagerPlugin()
+class PgManagerPluginPrivate
 {
-    // Create your members
-}
+public:
+    NavigationWidget navigationWidget;
+};
+
+static PgManagerPluginPrivate *dd = nullptr;
 
 PgManagerPlugin::~PgManagerPlugin()
 {
-    // Unregister objects from the plugin manager's object pool
-    // Delete members
+    delete dd;
+    dd = nullptr;
 }
 
 bool PgManagerPlugin::initialize(const QStringList &arguments, QString *errorString)
@@ -32,19 +23,9 @@ bool PgManagerPlugin::initialize(const QStringList &arguments, QString *errorStr
     Q_UNUSED(arguments)
     Q_UNUSED(errorString)
 
+    dd = new PgManagerPluginPrivate;
+
     return true;
 }
 
-void PgManagerPlugin::extensionsInitialized()
-{
-
-}
-
-ExtensionSystem::IPlugin::ShutdownFlag PgManagerPlugin::aboutToShutdown()
-{
-    return SynchronousShutdown;
-}
-
-
-}
-}
+}}

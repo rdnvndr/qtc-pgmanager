@@ -7,26 +7,24 @@
 namespace PgManager {
 namespace Internal {
 
+//! The class is a PostgreSQL manager plugin
 class PgManagerPlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QtCreatorPlugin" FILE "PgManager.json")
 
 public:
-    //! Constructor a plugin
-    PgManagerPlugin();
+    //! Constructs a plugin
+    PgManagerPlugin() = default;
 
-    //! Destroy a plugin
-    ~PgManagerPlugin();
+    //! Destroys a plugin
+    ~PgManagerPlugin() final;
 
     //! Initializes a plugin
-    bool initialize(const QStringList &arguments, QString *errorString);
+    bool initialize(const QStringList &arguments, QString *errorString) override;
 
     //! Initializes a depend plugins
-    void extensionsInitialized();
-
-    //! Deinitializes a plugin
-    ShutdownFlag aboutToShutdown();
+    void extensionsInitialized() final {}
 };
 
 }

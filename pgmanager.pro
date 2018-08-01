@@ -3,12 +3,13 @@ DEFINES += PGMANAGER_LIBRARY
 # PgManager files
 
 SOURCES += \
-        pgmanagerplugin.cpp
+        pgmanagerplugin.cpp \
+    navigationwidget.cpp
 
 HEADERS += \
         pgmanagerplugin.h \
         pgmanager_global.h \
-        pgmanagerconstants.h
+    navigationwidget.h
 
 # Qt Creator linking
 
@@ -20,7 +21,7 @@ isEmpty(IDE_SOURCE_TREE): IDE_SOURCE_TREE = "/usr/src/qtcreator"
 ## Either set the IDE_BUILD_TREE when running qmake,
 ## or set the QTC_BUILD environment variable, to override the default setting
 isEmpty(IDE_BUILD_TREE): IDE_BUILD_TREE = $$(QTC_BUILD)
-isEmpty(IDE_BUILD_TREE): IDE_BUILD_TREE = "/usr/src/qtcreator/build"
+isEmpty(IDE_BUILD_TREE): IDE_BUILD_TREE = "/usr/src/qtcreator"
 
 ## uncomment to build plugin into user config directory
 ## <localappdata>/plugins/<ideversion>
@@ -39,7 +40,8 @@ QTC_LIB_DEPENDS += \
     # nothing here at this time
 
 QTC_PLUGIN_DEPENDS += \
-    coreplugin
+    coreplugin \
+    projectexplorer
 
 QTC_PLUGIN_RECOMMENDS += \
     # optional plugin dependencies. nothing here at this time
