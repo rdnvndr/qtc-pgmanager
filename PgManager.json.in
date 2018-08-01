@@ -1,0 +1,11 @@
+{
+    \"Name\" : \"PgManager\",
+    \"Version\" : \"0.0.1\",
+    \"CompatVersion\" : \"0.0.1\",
+    \"Vendor\" : \"Andrey Rodionov\",
+    \"Copyright\" : \"(C) 2018 Andrey Rodionov\",
+    \"License\" : \"GNU General Public License v2.0\",
+    \"Description\" : \"\",
+    \"Url\" : \"\",
+    $$dependencyList
+}
