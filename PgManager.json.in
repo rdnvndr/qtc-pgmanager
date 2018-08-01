@@ -6,6 +6,6 @@
     \"Copyright\" : \"(C) 2018 Andrey Rodionov\",
     \"License\" : \"GNU General Public License v2.0\",
     \"Description\" : \"\",
-    \"Url\" : \"\",
+    \"Url\" : \"https://github.com/rdnvndr/qtc-pgmanager\",
     $$dependencyList
 }
