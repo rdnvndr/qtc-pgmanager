@@ -1,1 +1,1 @@
-# qtc-pgmanager
+# PgManager plugin
