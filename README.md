@@ -1,5 +1,5 @@
 # PgManager
-The PgManagaer is plugin of the Qt Creator IDE for the development and administration of PostgreSQL databases.
+The PgManager is plugin of the Qt Creator IDE for the development and administration of PostgreSQL databases.
 
 ## Author/Contributors
 * Author: [rdnvndr](https://github.com/rdnvndr)
